@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <title>Home</title>
+    <meta charset="UTF-8">
+    
+    <!--    Bootstrap grid system:
+    https://www.w3schools.com/bootstrap4/bootstrap_grid_system.asp
+    -->
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./styles/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Karma" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+</head>
+
+<body>
+
+    <nav>
+        <h1>Nobel<span style="color: gold">.</span></h1>
+
+    </nav>
+
+<!-- Play pause and mute:
+https://stackoverflow.com/questions/13810085/html5-audio-display-only-play-pause-and-mute-buttons
+   -->
+    <audio id="player">
+        <source src="./music/dvorak.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10">
+
+<!--
+                Slideshow:
+https://www.w3schools.com/w3css/w3css_slideshow.asp
+-->
+
+                <div class="slideshow-container">
+
+                    <div class="mySlides fade">
+                        <img src="./images/0.jpg" style="width:100%" alt = "Nobel Winner Picture">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="./images/1.jpg" style="width:100%" alt = "Nobel Winner Picture">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="./images/2.jpg" style="width:100%" alt = "Nobel Winner Picture">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="./images/3.jpg" style="width:100%" alt = "Nobel Winner Picture">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="./images/4.jpg" style="width:100%" alt = "Nobel Winner Picture">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="./images/5.jpg" style="width:100%" alt = "Nobel Winner Picture">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="./images/6.jpg" style="width:100%" alt = "Nobel Winner Picture"> 
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="./images/7.jpg" style="width:100%" alt = "Nobel Winner Picture">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="./images/8.jpg" style="width:100%" alt = "Nobel Winner Picture">
+                    </div>
+                    
+                    <div class="mySlides fade">
+                        <img src="./images/9.jpg" style="width:100%" alt = "Nobel Winner Picture">
+                    </div>
+                    
+                    <div class="mySlides fade">
+                        <img src="./images/10.jpg" style="width:100%" alt = "Nobel Winner Picture">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="./images/11.jpg" style="width:100%" alt = "Nobel Winner Picture">
+                    </div>
+                    
+                    <div class="mySlides fade">
+                        <img src="./images/12.jpg" style="width:100%" alt = "Nobel Winner Picture">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="./images/13.jpg" style="width:100%" alt = "Nobel Winner Picture">
+                    </div>
+                </div>
+            </div>
+                <div class="col-1">
+                <div class="icon-bar">
+                    
+<!--                    Play pause and mute:
+https://stackoverflow.com/questions/13810085/html5-audio-display-only-play-pause-and-mute-buttons
+-->
+<!--    Icon packs:
+https://icons8.com/icon/set/mute/all
+-->
+                    <img class="crossRotate" onclick="document.getElementById('player').play()" src="./icons/play.png" width="55" height="55" tabindex="1" alt = "play">
+                    <img class="crossRotate" onclick="document.getElementById('player').pause()" src="./icons/pause.png" width="55" height="55" tabindex="1" alt = "pause">
+                    <img id="mute" class="crossRotate" onclick="changeImage()" src="./icons/unmute.png" width="55" height="55" tabindex="1" alt = "mute/unmute">
+                </div>
+                    </div>
+            </div>
+
+<!--
+        Links to section of a page:
+https://www.computerhope.com/issues/ch000049.htm
+-->
+
+        <div class="arrow"><a href="#table"><img src="./images/blackbox_opt.jpg" alt = "hidden image"></a></div>
+
+        <div class="spacing"></div>
+
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10">
+                <div>
+                    <h2 style="color:goldenrod; text-align: center; width: 70%; margin-left: 15%; margin-right: 15%">This website endeavours to teach visitors about the amazing lives and achievements of the world's best and brightest: The Nobel Prize winners.</h2>
+
+                    <br>
+                    <h3 id="table" style="color:goldenrod; text-align: center; width: 70%; margin-left: 15%; margin-right: 15%">Search Nobel Prize winners:</h3>
+                </div>
+                <div class="spacingtable"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10" id="submitimage">
+                <form action="#">
+
+                    <select id="yearfrom" name="Year From">
+                        <option value="Year From" selected disabled>Year From</option>
+
+                    </select>
+
+                    <select id="yearto" name="Year To">
+                        <option value="Year To" selected disabled>Year To</option>
+                    </select>
+
+                    <select id="category" name="Category">
+                        <option value="0" selected>Category</option>
+                    </select>
+
+                    <select id="country" name="Country">
+                        <option value="0" selected>Country Born in</option>
+
+                    </select>
+                    
+                    <img onclick="validate()" src="./images/nobelcoin.jpg" width="70" height="70" border="3px solid black" tabindex="1" alt = "submit">
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10"></div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10">
+                <div id="changeme" class="output-table output-table-rounded" style="width: 100%"></div>
+            </div>
+        </div>
+    </div>
+<!--
+Modal:
+https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_modal4
+-->
+
+    <div class="w3-container">
+        <div id="id01" class="w3-modal">
+            <div class="w3-modal-content w3-animate-top w3-card-4">
+                <header class="w3-container w3-amber">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                    <h2 style = "color: black">More information about: <span class= "span-text" id="name"></span> </h2>
+                </header>
+                <div class="w3-container" id="modalpar" style="background: black">
+                    <br>
+                    <p>Year of Birth: <span class= "span-text" id="birth"></span></p>
+                    <p>Year of Death: <span class= "span-text" id="death"></span></p>
+                    <p>City of Birth: <span class= "span-text" id="city"></span></p>
+                    <p>Motivation for the award: <span class= "span-text" id="motiv"></span></p>
+                    <p style="font-size: 115%; color: gold">Affiliations</p>
+                    <p>Name: <span class= "span-text" id="affname"></span></p>
+                    <p>City: <span class= "span-text" id="affcity"></span></p>
+                    <p>Country: <span class= "span-text" id="affcoun"></span></p>
+                    <br>
+                    <footer class="w3-container w3-amber">
+                        <p style="color: black; font-size: 120%">A Nobel Prize for: <span class= "span-text" id="cat"></span> in: <span class= "span-text" id="year"></span></p>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<script>
+    var xmlhttp = new XMLHttpRequest();
+    var url = "nobelWinners.json";
+
+    
+//    XML error:
+//https://stackoverflow.com/questions/8866761/xmlhttprequest-ajax-error
+
+    xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4){ 
+            if (xmlhttp.status == 200) {
+            var parsedObj = JSON.parse(xmlhttp.responseText);
+            displayJSON(parsedObj); 
+            }
+            else{
+            alert("Problem retrieving data! Please contact the site administrator.")
+            }
+        }
+    };
+
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+
+    function displayJSON(obj) {
+
+        var nobeldata = obj.laureates;
+        var selectcountry = document.getElementById('country');
+        var selectcategory = document.getElementById('category');
+        var selectyearfrom = document.getElementById('yearfrom');
+        var selectyearto = document.getElementById('yearto');
+        var option;
+        var countries = [];
+        var categories = [];
+        var years = [];
+        for (var i = 0; i < nobeldata.length; i++) {
+            for (var j = 0; j < nobeldata[i].prizes.length; j++) {
+                var country = nobeldata[i].bornCountry;
+                var category = nobeldata[i].prizes[j].category;
+                var year = nobeldata[i].prizes[j].year;
+
+//.includes for an array:
+//https://stackoverflow.com/questions/7378228/check-if-an-element-is-present-in-an-array
+
+                if (countries.includes(country) == false && country != undefined) {
+                    countries.push(country);
+                }
+
+                if (categories.includes(category) == false && category != undefined) {
+                    categories.push(category);
+                }
+                if (years.includes(year) == false && year != undefined) {
+                    years.push(year);
+                }
+            }
+        }
+//.sort array method:
+//https://www.w3schools.com/jsref/jsref_sort.asp
+
+        countries.sort();
+        categories.sort();
+        years.sort((a, b) => a - b);
+
+
+//        Add JSON to dropdown:
+//https://stackoverflow.com/questions/32627300/binding-json-string-to-dropdownlist
+        
+//        Sort numbers:
+//https://stackoverflow.com/questions/1063007/how-to-sort-an-array-of-integers-correctly
+
+
+        for (var i = 0; i < countries.length; i++) {
+            var sortedCountry = countries[i];
+            option = document.createElement('option');
+            option.text = sortedCountry;
+            selectcountry.add(option);
+        }
+        for (var i = 0; i < categories.length; i++) {
+            var sortedCat = categories[i];
+            option = document.createElement('option');
+            option.text = sortedCat;
+            selectcategory.add(option);
+        }
+        for (var i = 0; i < years.length; i++) {
+            var sortedyear = years[i];
+            option = document.createElement('option');
+            option.text = sortedyear;
+            selectyearfrom.add(option);
+        }
+        for (var i = 0; i < years.length; i++) {
+            var sortedyear = years[i];
+            option = document.createElement('option');
+            option.text = sortedyear;
+            selectyearto.add(option);
+        }
+
+    }
+
+    function showtable() {
+        var yearfrom = document.getElementById("yearfrom");
+        var yearto = document.getElementById("yearto");
+        var cat = document.getElementById("category");
+        var country = document.getElementById("country");
+        
+        
+//        Validate dropdown.values:
+//https://stackoverflow.com/questions/15368172/javascript-dropdown-validation
+
+        
+        var yearfromdata = yearfrom.options[yearfrom.selectedIndex].value;
+        var yeartodata = yearto.options[yearto.selectedIndex].value;
+        var catchoice = cat.options[cat.selectedIndex].value;
+        var countrychoice = country.options[country.selectedIndex].value;
+        var outputString = "<h2>Search Results:</h2><br><div class=\"row\"><div class=\"col-3\"></div><div class=\"col-2\"><h3>Filter by gender:</h3></div><div class=\"col-1\"></div><div class=\"col-2\"><div class=\"radio\"><div><input type=\"radio\" onclick = \"genderFunction()\" id=\"allgenders\" name=\"gender\" value=\"all\" checked/><label for=\"allgenders\">&nbspAll genders</label></div><div><input type=\"radio\" onclick = \"genderFunction()\" id=\"male\" name=\"gender\" value=\"male\"/><label for=\"male\">&nbspMale</label></div><div><input type=\"radio\" onclick = \"genderFunction()\" id=\"female\" name=\"gender\" value=\"female\"/><label for=\"female\">&nbspFemale</label></div></div></div></div><table id=\"resulttable\">";
+
+        outputString += "<thead><tr><th class=\"row-name\">Name</th>+<th style=\"display:none\">gender</th>+<th style=\"display:none\">id</th><th class=\"row-category\">Category</th>+<th class=\"row-year\">Year</th>+<th class=\"row-info\">More information</th>+</tr></thead><tbody>";
+        var parsedObj = JSON.parse(xmlhttp.responseText);
+        var plaureates = parsedObj.laureates;
+        var count = 0;
+       
+        for (var i = 0; i < plaureates.length; i++) {
+            for (var j = 0; j < plaureates[i].prizes.length; j++) {
+                var firstname = plaureates[i].firstname;
+                var prizes = plaureates[i].prizes[j];
+                var year = prizes.year;
+                var category = prizes.category;
+                var countryborn = plaureates[i].bornCountry;
+                var catchoice = cat.options[cat.selectedIndex].value;
+                var countrychoice = country.options[country.selectedIndex].value;
+                var gender = plaureates[i].gender;
+                var id = plaureates[i].id;
+
+                if (catchoice == "0") {
+                    catchoice = category;
+                    ////            catchoice = capitalizeFirstLetter(catchoice);
+                }
+                if (category != catchoice) {
+                    continue;
+                }
+                if (countrychoice == "0") {
+                    countrychoice = countryborn;
+                }
+                if (countryborn != countrychoice) {
+                    continue;
+                }
+
+                if (year >= yearfromdata && year <= yeartodata) {
+                    var firstname = plaureates[i].firstname;
+                    if (firstname != "") {
+                        count++;
+                    }
+                    var surname = plaureates[i].surname;
+                    outputString += "<tr><td>" + firstname;
+                    if (surname != undefined) {
+                        outputString += " " + surname;
+                    }
+                    outputString += "</td><td style=\"display:none\">" + gender + "</td><td style=\"display:none\">" + id + "</td><td>" + catchoice + "</td><td>" + year + "</td><td>" + "<button id =" + id + " type =\"button\" onclick=\"document.getElementById('id01').style.display='block'; idFunction(this.id)\" class=\"w3-button w3-black\">More<br>Info</button>" + "</td></tr>";
+                }
+
+
+            }
+        }
+        outputString += "</tbody></table><div class=\"spacingtable\"></div>";
+        if (count == 0) {
+            alert("No results found! Please try a different search!")
+        } else {
+            document.getElementById("changeme").innerHTML = outputString;
+        }
+
+    }
+   
+
+    function idFunction(id) {
+       
+        var resultscounter = 0;
+
+        var Year_Birth = "error";
+        var Year_Death = "error";
+        var City_Birth = "error";
+        var Motivation = "error";
+        var affiliationname = "error";
+        var affiliationcity = "error";
+        var affiliationcountry = "error";
+        var name = "error";
+        var cat = "error";
+        var year = "error";
+
+        var parsedObje = JSON.parse(xmlhttp.responseText);
+        var laureates = parsedObje.laureates;
+        for (var i = 0; i < laureates.length; i++) {
+            var myid = laureates[i].id;
+            if (myid == id) {
+
+                name = laureates[i].firstname;
+                if (name == undefined) {
+                    name = "Not Available"
+                }
+                var surname = laureates[i].surname;
+                if (surname != undefined) {
+                    name = name + " " + surname;
+                }
+
+                for (var j = 0; j < laureates[i].prizes.length; j++) {
+
+                    if (j == 0) {
+                        year = laureates[i].prizes[0].year;
+                        if (year == undefined) {
+                            year = "Not Available"
+                        }
+                        cat = laureates[i].prizes[0].category;
+                        if (cat == undefined) {
+                            cat = "Not Available"
+                        }
+                        Motivation = laureates[i].prizes[0].motivation;
+                        if (Motivation == undefined) {
+                            Motivation = "Not Available"
+                        }
+                        affiliationname = laureates[i].prizes[0].affiliations[0].name;
+                        if (affiliationname == undefined) {
+                            affiliationname = "Not Available"
+                        }
+                        affiliationcity = laureates[i].prizes[0].affiliations[0].city;
+                        if (affiliationcity == undefined) {
+                            affiliationcity = "Not Available"
+                        }
+                        affiliationcountry = laureates[i].prizes[0].affiliations[0].country;
+                        if (affiliationcountry == undefined) {
+                            affiliationcountry = "Not Available"
+                        }
+                    } else if (j > 0) {
+                        if (laureates[i].prizes[j].year == undefined) {
+                            year = "Not Available"
+                        } else {
+                            year += " and " + laureates[i].prizes[j].year;
+                        }
+
+                        if (laureates[i].prizes[j].category == undefined) {
+                            cat = "Not Available"
+                        } else {
+                            cat += " and " + laureates[i].prizes[j].category;
+                        }
+
+                        if (laureates[i].prizes[j].motivation == undefined) {
+                            Motivation = "Not Available"
+                        } else {
+                            Motivation += "<br><br><p><span style=\"color: goldenrod\">Motivation for Nobel Prize number</span>" + (j + 1) + ": "  + "<span class= \"span-text\">" + laureates[i].prizes[j].motivation+"</span></p>";
+                        }
+
+                        if (laureates[i].prizes[j].affiliations[0].name == undefined) {
+                            affiliationname = "Not Available"
+                        } else {
+                            affiliationname += "<p><span style=\"color: goldenrod\">Name for Nobel Prize number</span>" + (j + 1) + ": "  + "<span class= \"span-text\">" + laureates[i].prizes[j].affiliations[0].name+"</span></p>";
+                        }
+    
+                        if (laureates[i].prizes[j].affiliations[0].city == undefined) {
+                            affiliationcity = "Not Available"
+                        } else {
+                            affiliationcity += "<p><span style=\"color: goldenrod\">City for Nobel Prize number</span>" + (j + 1) + ": "  + "<span class= \"span-text\">" + laureates[i].prizes[j].affiliations[0].city+"</span></p>";
+                        }
+
+
+                        if (laureates[i].prizes[j].affiliations[0].country == undefined) {
+                            affiliationcountry = "Not Available"
+                        } else {
+                            affiliationcountry += "<p><span style=\"color: goldenrod\">Country for Nobel Prize number</span>" + (j + 1) + ": " + "<span class= \"span-text\">" + laureates[i].prizes[j].affiliations[0].country+"</span></p>";
+                        }
+                    }
+                }
+
+
+                Year_Birth = laureates[i].born;
+                if (Year_Birth == "0000-00-00" || Year_Birth == undefined) {
+                    Year_Birth = "Not Available"
+                }
+
+                Year_Death = laureates[i].died;
+                if (Year_Death == "0000-00-00" || Year_Death == undefined) {
+                    Year_Death = "Not Available"
+                }
+
+                City_Birth = laureates[i].bornCity;
+                if (City_Birth == undefined) {
+                    City_Birth = "Not Available"
+                }
+
+            }
+        }
+
+
+        document.getElementById("name").innerHTML = name;
+        document.getElementById("year").innerHTML = year;
+        document.getElementById("cat").innerHTML = cat;
+        document.getElementById("birth").innerHTML = Year_Birth;
+        document.getElementById("death").innerHTML = Year_Death;
+        document.getElementById("city").innerHTML = City_Birth;
+        document.getElementById("motiv").innerHTML = Motivation;
+        document.getElementById("affname").innerHTML = affiliationname;
+        document.getElementById("affcity").innerHTML = affiliationcity;
+        document.getElementById("affcoun").innerHTML = affiliationcountry;
+    }
+
+
+
+    function genderFunction() {
+
+//        Search tr td in table:
+//https://www.w3schools.com/howto/howto_js_filter_table.asp
+//https://stackoverflow.com/questions/42451865/how-do-i-iterate-through-each-td-and-tr-in-a-table-using-javascript-or-jquery
+
+        var table, tr, td;
+        table = document.getElementById("resulttable");
+        tr = table.getElementsByTagName("tr");
+        var resultcounter = 0;
+        for (i = 1; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[1];
+
+//            Hide a row:
+//https://stackoverflow.com/questions/5440657/how-to-hide-columns-in-html-table
+//
+//https://stackoverflow.com/questions/42451865/how-do-i-iterate-through-each-td-and-tr-in-a-table-using-javascript-or-jquery
+
+            
+//            Radio button checked:
+//https://stackoverflow.com/questions/25314698/show-or-hide-a-table-row-based-on-a-radio-button-value
+//
+//https://stackoverflow.com/questions/1423777/how-can-i-check-whether-a-radio-button-is-selected-with-javascript
+
+            
+            if (document.getElementById('allgenders').checked) {
+                tr[i].style.display = "";
+                resultcounter++;
+            } else if (document.getElementById('male').checked) {
+                if (td.innerHTML != "male") {
+                    tr[i].style.display = "none";
+                } else {
+                    tr[i].style.display = "";
+                    resultcounter++;
+                }
+
+            } else if (document.getElementById('female').checked) {
+                if (td.innerHTML != "female") {
+                    tr[i].style.display = "none";
+                } else {
+                    tr[i].style.display = "";
+                    resultcounter++;
+                }
+
+            }
+        }
+        if (resultcounter == 0) {
+            alert("No results found, please try a different search!")
+        }
+    }
+
+
+
+    function validate() {
+
+        var yearfrom = document.getElementById("yearfrom");
+        var yearto = document.getElementById("yearto");
+
+        var yearfromdata = yearfrom.options[yearfrom.selectedIndex].value;
+        var yeartodata = yearto.options[yearto.selectedIndex].value;
+
+        if (yearfromdata == "Year From") {
+            alert("Please select 'year from' option");
+            return false;
+        }
+        if (yeartodata == "Year To") {
+            alert("Please select 'year to' option");
+            return false;
+        }
+        if (yearfromdata > yeartodata) {
+            alert("'From year' must be equal to or less than 'to year'");
+            return false;
+        } else {
+            showtable();
+        }
+    }
+
+
+    var modal = document.getElementById('id01');
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+//Slideshow:
+//https://www.w3schools.com/w3css/w3css_slideshow.asp
+
+    
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 6000);
+    }
+    
+//    Changing image on mouse click:
+//http://www.webtalkto-version-9dot2.webtalkto.com/changing-image-on-mouse-click-using-javascript/
+
+
+    function changeImage() {
+        var image = document.getElementById("mute");
+        document.getElementById('player').muted = !document.getElementById('player').muted
+
+        if (image.src.match("./icons/unmute.png")) {
+            image.src = "./icons/mute.png";
+        } else {
+            image.src = "./icons/unmute.png";
+        }
+    }
+
+</script>
+</body>
+</html>

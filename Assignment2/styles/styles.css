@@ -1,0 +1,362 @@
+body {
+    background-color: black;
+}
+
+nav {
+    width: 100%;
+    padding-left: 25px;
+    text-align: left;
+    color: white;
+}
+
+audio {
+    float: right;
+    display: block;
+    width: 200px;
+}
+
+#modalpar {
+    color: white;
+}
+
+p{
+    color: goldenrod;
+}
+
+.span-text{
+    color: white;
+}
+
+h2,
+h3 {
+    text-align: center;
+    font-family: karma, serif;
+    color: white;
+}
+
+.radio {
+    background: #EED592;
+    color: white;
+    border: 2px solid #957030;
+    border-radius: 5%;
+    padding-left: 25px;
+    padding-top: 5px;
+    padding-right: 25px;
+    position: relative;
+    margin:0 auto;
+    width: 200px;
+    min-width: 35px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.mySlides {
+    display: none;
+}
+
+img {
+    vertical-align: middle;
+    max-height: 600px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+
+.active {
+    background-color: #717171;
+}
+
+/*
+Slideshow fade in:
+https://gist.github.com/nisanth074/46671279996bc9e5a863
+*/
+
+/* Fading animation */
+.fade {
+    animation: fade 6000ms ease-in-out;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0.4;
+        transform: translateY(-40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0.4;
+        transform: translateY(-40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+button {
+
+    cursor: pointer;
+    background: gold;
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    text-shadow: 1px 1px 1px white;
+    font-family: karma, serif;
+}
+
+button:hover {
+    transform: scale(1.2);
+}
+
+
+.icon-bar {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    cursor: pointer;
+
+}
+
+/*Down arrow animation:
+https://codepen.io/JoshMac/pen/MaYEmJ
+*/
+.arrow,
+.arrow:before {
+    position: absolute;
+    left: 50%;
+    z-index: 100;
+}
+
+.arrow {
+    width: 40px;
+    height: 40px;
+    top: 92%;
+    margin: -20px 0 0 -20px;
+    transform: rotate(45deg);
+    border-left: none;
+    border-top: none;
+    border-right: 2px #fff solid;
+    border-bottom: 2px #fff solid;
+    z-index: 100;
+}
+
+
+.arrow:before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    top: 92%;
+    margin: -25px 0 0 -10px;
+    border-left: none;
+    border-top: none;
+    border-right: 1px #fff solid;
+    border-bottom: 1px #fff solid;
+    /* animation-duration: 2s;
+  animation-iteration-count: infinite;*/
+    animation: arrow 2000ms infinite;
+    z-index: 100;
+}
+
+.arrow img {
+    z-index: -100;
+    height: 50px;
+    width: 50px;
+    opacity: 0.1;
+
+}
+
+#submitimage img:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+@keyframes arrow {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-10px, -10px);
+    }
+}
+
+.spacing {
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+
+.spacingtable {
+    margin-top: 80px;
+}
+
+/*
+Table CSS:
+https://jsfiddle.net/zinoui/3LfE2/
+*/
+
+
+.output-table {
+    position: absolute;
+    border: solid 1px #DDEEEE;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font: normal 18px karma, serif;
+    width: 100%;
+    table-layout: fixed;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-bottom: 150px;
+    overflow: visible;
+}
+
+.output-table thead th {
+    background-color: #DDEFEF;
+    border: solid 1px #DDEEEE;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-shadow: 1px 1px 1px black;
+}
+
+.output-table tbody td {
+    border: solid 1px #DDEEEE;
+    color: #333;
+    padding: 10px;
+    text-shadow: 1px 1px 1px #fff;
+    text-align: center;
+}
+
+.output-table-rounded {
+    border: none;
+    width: 100%;
+    position: absolute;
+    margin-left: -20px;
+    margin-right: -20px;
+    overflow: hidden;
+    table-layout: fixed;
+}
+
+.output-table-rounded thead th {
+    background-color: #CFAD70;
+    border: none;
+    text-shadow: 1px 1px 1px black;
+    color: white;
+    text-align: center;
+}
+
+.output-table-rounded thead th:first-child {
+    border-radius: 10px 0 0 0;
+}
+
+.output-table-rounded thead th:last-child {
+    border-radius: 0 10px 0 0;
+}
+
+.output-table-rounded tbody td {
+    border: none;
+    border-top: solid 1px #957030;
+    background-color: #EED592;
+    text-align: center;
+}
+
+.output-table-rounded tbody tr:last-child td:first-child {
+    border-radius: 0 0 0 10px;
+}
+
+.output-table-rounded tbody tr:last-child td:last-child {
+    border-radius: 0 0 10px 0;
+}
+
+/*
+TH and TR widths:
+https://css-tricks.com/fixing-tables-long-strings/
+*/
+
+.row-name {
+    width: 435px;
+}
+
+.row-category {
+    width: 350px;
+}
+
+.row-year {
+    width: 250px;
+}
+
+.row-info {
+    width: 250px;
+}
+
+.output-table tr:hover td {
+background-color: goldenrod;
+}
+
+/*
+.crossrotate:
+https://jsbin.com/fulocomu/1/edit?css,output
+*/
+
+.crossRotate {
+    transition-duration: 1s;
+    transition-property: transform;
+    outline: 0;
+}
+
+.crossRotate:focus {
+    transform: rotate(360deg);
+}
+
+/*Styling labels:
+https://www.webteacher.ws/2009/03/05/tip-styling-the-label-element-with-css/*/
+/*Label color:
+https://stackoverflow.com/questions/33511556/how-to-change-label-color-with-html-and-css-without-js*/
+
+
+label {
+    color: black;
+    text-shadow: white 1px 1px 1px;
+    font-family: 'Karma', serif;
+}
+
+
+
+form {
+    text-align: center;
+    align-self: center;
+    padding: 30px;
+    border-radius: 10%;
+    width: 100%;
+}
+
+form select,
+input {
+    text-align: center;
+    align-self: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10%;
+    margin-right: 15px;
+    margin-left: 15px;
+    border: 3px solid goldenrod;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}

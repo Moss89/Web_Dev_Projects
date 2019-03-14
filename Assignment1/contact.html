@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang = "en-GB">
+<head>
+    <meta charset="UTF-8">
+	<title>Contact</title>
+	<link rel="stylesheet" type="text/css" href="./Styles/Styles.css">
+  <link rel="shortcut icon" href="./Images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="./Images/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Karma" rel="stylesheet">
+</head>
+
+
+<body>
+<nav>
+  <ul>
+    <li><a href="./index.html">Home</a></li>
+    <li><a href="./chinagallery.html">China Photo Gallery</a></li>
+    <li><a href="./japangallery.html">Japan Photo Gallery</a></li>
+    <li><a href="./videos.html">Video Gallery</a></li>
+    <li><a href="./contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+
+<div class="fixed-bg" id = "fixed-bg-contact"></div>
+
+
+<p class = "info" >Contact Me<span class="color-character">.</span></p>
+
+<main>
+<div class = "container">
+
+<!-- Styling from /*https://www.udemy.com/the-web-developer-bootcamp/*/ -->
+<article>
+   
+  <time datetime="2018-10-10 10:00">October 10 2018</time>
+  <h2>Messages so Far<span class="color-character">.</span></h2>
+
+  <p class="headline">
+  Since starting this website, I have received over 20 messages from people from 12 different countries!
+  </p>
+
+  <p>I'm delighted to read the messages you send me, and so far most of the messages have been about giving me advice on places to visit, such as Myanmar, India, and Mongolia. I would love to visit these places, so hopfully I'll have the time soon! </p>
+
+  <p>If you would like to contact me about anything, please read the post below!</p>
+
+</article>
+
+<hr> 
+<article>
+  <time datetime="2018-09-28 09:00">September 28 2018</time>
+  <h2>Get in Touch<span class="color-character">.</span></h2>
+
+  <p class="headline">
+  All the ways in which you can contact me!
+  </p>
+
+  <p>As you may have noticed, there is a icon bar on each page which let's you contact me on Facebook, Linkedin, Google Plus, Twitter, or by email. Feel free to contact me through any of these mediums and I'll do my best to get back to you as soon as possible!</p>
+
+  <p>However, if it's easier for you, or you don't want to use social media etc, you can send me a message using the form below. Just fill out your details and hit submit! I will write back to you as soon I have the time!</p>
+
+
+<form>
+<h2>Fill Out The Form Below<span class="color-character" style="font-size:100%">:</span></h2>
+
+<!-- Learned forms from https://www.udemy.com/the-web-developer-bootcamp/ -->
+
+<div class = "contact-me-box">
+    <label  for="FirstName">First Name: </label>
+    <input id ="FirstName" type="text" name="FirstName" placeholder="First Name" required >
+</div>
+
+<div class = "contact-me-box">
+    <label for="LastName">Last Name: </label>
+    <input id ="LastName" type="text" name="LastName" placeholder="Last Name" required>
+    <p></p>
+</div>
+
+<div class = "contact-me-box">
+    <p style="color: cornflowerblue; font-size: 115%; font-weight: bold;">Please select your gender: </p> 
+    <p style="color: cornflowerblue;">(with many non-English names I might not know how to address you!)</p>
+    <label for="Male">Male</label>
+    <input id = "Male" type="radio" name="Gender" value="Male">
+    <label for="Female">Female</label>
+    <input id = "Female" type="radio" name="Gender" value="Female">
+    <label for="Other">Other</label>
+    <input id = "Other" type="radio" name="Gender" value="Other">
+</div>
+
+<div class = "contact-me-box">
+    <label for="Email">Email: </label>
+    <input type="Email" name="Email" id="Email" required placeholder="Email Address">
+</div>
+
+<div class = "contact-me-box">
+    <p style="color: cornflowerblue; font-size: 115%; font-weight: bold;">Message</p>
+
+    <!-- Textarea:
+    https://www.w3schools.com/tags/att_textarea_form.asp -->
+
+    <textarea name="Message" rows="10" cols="25" placeholder="Please enter your message here!"
+     id="Message" required title="Please write a short message"></textarea>
+</div>
+
+<div class = "contact-me-box">
+    <label for="reason">Reason for contact: </label>
+    <select id = "reason" name = "reason">
+
+    <!--   Dropdown select disabled attribute:
+      https://www.w3schools.com/tags/att_select_disabled.asp -->
+
+      <option value = "0" selected disabled>Select a reason</option>
+      <option>Travel Advice</option>
+      <option>Travel Together</option>
+      <option>General Information</option>
+      <option>A Compliment</option>
+    </select>
+</div>
+
+
+<div class = "contact-me-box">
+    <label for="Terms">I agree not to send spam!</label>
+    <input type="Checkbox" name="Checkbox" id="Terms" required>
+</div>
+
+<div class = "contact-me-box">
+    <input type="Submit" name="Submit">
+</div>
+
+</form>
+<hr>
+</article>
+</div>
+
+</main>
+
+
+<div class="icon-bar">
+  <a href="https://www.facebook.com/tomas.murphy.12" target = "_blank" class="facebook"><img src="./Images/fbicon.jpg" alt = "Facebook" style="width:2.5vw; height:2.5vw"></a> 
+  <a href="https://twitter.com/MossMurph" target = "_blank" class="twitter"><img src="./Images/twiticon.jpg" alt = "Twitter" style="width:2.5vw; height:2.5vw"></a> 
+  <a href="https://plus.google.com/+TomasMurphy89" target = "_blank" class="google"><img src="./Images/gplusicon.jpg" alt = "Google Plus" style="width:2.5vw; height:2.5vw"></a> 
+  <a href="https://www.linkedin.com/in/tomasmurphy89/" target = "_blank" class="linkedin"><img src="./Images/linkedinicon.jpg" alt= "Linkedin" style="width:2.5vw; height:2.5vw"></a>
+  <a href="https://www.youtube.com/channel/UCwp3NITdmHEjdB_HtsWUxOg" target = "_blank" class="youtube"><img src="./Images/youtubeicon.jpg" alt= "Youtube" style="width:2.5vw; height:2.5vw"></a> 
+  <a href="mailto:tomas.murphy2@gmail.com?Subject=Website%20visitor" target="_top" class="gmail"><img src="./Images/email.jpg" alt = "email" style="width:2.5vw; height:2.5vw"></a>  
+</div>
+
+</body>
+</html>

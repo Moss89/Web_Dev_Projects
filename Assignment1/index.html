@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang = "en-GB">
+
+<head>
+	<title>Home</title>
+	 <meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="./Styles/Styles.css">
+	<!-- https://www.favicon-generator.org/ -->
+	<link rel="shortcut icon" href="./Images/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="./Images/favicon.ico" type="image/x-icon">
+		<!-- fonts.google.com -->
+	<link href="https://fonts.googleapis.com/css?family=Karma" rel="stylesheet">
+</head>
+
+<body>
+
+
+<nav>
+	<ul>
+	  <li><a href="./index.html">Home</a></li>
+	  <li><a href="./chinagallery.html">China Photo Gallery</a></li>
+	  <li><a href="./japangallery.html">Japan Photo Gallery</a></li>
+	  <li><a href="./videos.html">Video Gallery</a></li>
+	  <li><a href="./contact.html">Contact Me</a></li>
+  	</ul>
+</nav>
+
+<header>
+	<div class="fixed-bg" id = "fixed-bg-home"></div>
+</header>
+
+<!-- 	Individual character styling:
+	https://stackoverflow.com/questions/17341670/change-color-of-one-character-in-a-text-box-html-css -->
+
+<h1><span style="color: darkcyan;  font-size: 150%">T</span>om<span class="color-character" style="font-size: 100%">'</span>s <span style="color: darkcyan; font-size: 150%;">T</span>ravels</h1>
+
+<p class = "info">Me<span class="color-character">.</span></p>
+
+<main>
+<div class = "container">
+
+	<!-- Style from /*https://www.udemy.com/the-web-developer-bootcamp/*/ -->
+<article>
+	<!-- Rounded images:
+	https://www.w3schools.com/css/tryit.asp?filename=trycss_ex_images_circle
+ -->
+  <img src="./Images/me.jpg" style = "border-radius: 50%"  alt="me"  id = "center">
+	<!-- https://www.w3schools.com/tags/tag_time.asp -->
+  <time datetime="2018-10-10 09:45">October 10 2018</time>
+	  <h2>Japan and China Compared<span class="color-character">.</span></h2>
+
+	  <p class="headline">
+	  Both countries are well known, located in Asia, and are neighbours. But many people struggle to decide which country to visit first. Hopefully this post will help you decide!
+	  </p>
+
+	  <p>The first thing to know about China is that it is HUGE. A trip to China is like a trip to Europe; you'll need to travel A LOT to see everything. So if you plan on taking in most of the famous sights in China, then you will need to have a lot of free time. Conversely, Japan is a very small country, and therefore more suited for short trips. To travel around China, flying is your fastest choice, but if you are sick of flights, the country operates many modern high speed trains, which are relatively cheap, and quite comfortable. In Japan, the high speed trains are the way to go. Flying could actually take longer due to the usual airport nonsense, and the views of the country whilst on the train are breathtaking.</p>
+
+	  <p>As for the cost of the visit, flights to and from both countries should be in the same ballpark, but with China you have more cities as options, so you might find a bargain if you are flexible with your starting city. Food is generally cheaper in China than in Japan, with one important caveat: Western food in China is quite expensive, whereas it costs roughly the same as local food in Japan. So, as long as you can skip your burritos, China will be cheaper! However, it must be noted that food safety in China isn't always the highest concerrn, so if you aren't "adventurous" in this regard, Japan is a safe bet. If you like to go to the supermarket and cook for yourself, China is the more affordable of the two, but Japan has higher quality products.</p>
+
+	   <p>To give an easier picture of how the prices compare, I created a handy little table. Green means affordable, yellow means reasonable, and red means pricey! But like I stated above, you often get what you pay for. So while China is definitely the cheaper country, if quality and comfort are your priority, then maybe Japan is the better option for you.</p>
+
+<div style="overflow-x: auto">
+<table>
+	<tr>
+	<th>Category</th>
+	<th>Groceries</th>
+	<th>Eating out</th>
+	<th>Transport</th>
+	<th>Accommodation</th>
+	<th>Entertainment</th>
+	</tr>
+
+	<tr>
+		<td>China</td>
+		<td class = "green"></td>
+		<td class = "yellow"></td>
+		<td class = "green"></td>
+		<td class = "yellow"></td>
+		<td class = "yellow"></td>
+	</tr>
+
+		<tr>
+		<td>Japan</td>
+		<td class = "yellow"></td>
+		<td class = "red"></td>
+		<td class = "yellow"></td>
+		<td class = "red"></td>
+		<td class = "red"></td>
+	</tr>
+</table>
+</div>
+	 
+
+</article>
+<hr>
+<article>
+  <time datetime="2018-09-28 08:50">September 28 2018</time>
+	  <h2>An Introduction<span class="color-character">.</span></h2>
+
+	  <p class="headline">
+	  Hey reader! My name is Tom, and I'm an Irish guy who likes to travel. I have been to 24 countries so far in my life (not included airport stopovers, that's cheating), and decided to create a website where I post photos and videos of where I've been to, and also give some advice. I will start the website with content from China and Japan, as these are the countries in which I have travelled more extensively. It's my goal to add in more pages over time, with more countries being included.
+	  </p>
+
+	  <p>So far on the site, you can find a China photo gallery, a Japan photo gallery, a video gallery, and a contact me page. In the next few weeks my plan is to create pages for Thailand, Cambodia, Vietnam, and Laos. All of the photos and videos that you see are mine! No guarantee when I'll have it complete by, but it will be worth the wait! </p>
+
+<!-- Style from p3_2.zip class exercise -->
+
+<div id="country">
+	<div class="wrapper">
+		<ul>
+			<li class="country1">
+				<h4>China</h4>
+				<p>China is a populous nation in East Asia whose vast landscape encompasses grassland, desert, mountains, lakes, rivers and more than 14,000km of coastline. Capital Beijing mixes modern architecture with historic sites such as the Forbidden City palace complex and Tiananmen Square. Shanghai is a skyscraper-studded global financial center. The iconic Great Wall of China runs east-west across the country's north. -Wikipedia.</p>
+			</li>
+			<li class="country2">
+				<h4>Japan</h4>
+				<p>Japan is an island nation in the Pacific Ocean with dense cities, imperial palaces, mountainous national parks and thousands of shrines and temples. Shinkansen bullet trains connect the main islands of Kyushu (with Okinawa's subtropical beaches), Honshu (home to Tokyo and Hiroshima’s atomic-bomb memorial) and Hokkaido (famous for skiing). Tokyo, the capital, is known for skyscrapers, shopping and pop culture. -Wikipedia</p>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class = "clear"></div>
+
+<div>
+  <p>Below is a list of the countries I have visited, sorted by continent:
+</div>
+
+<div id = "homepagelist">
+  	<ol>
+  		<li class="shadow">Europe
+  			<ul>
+  				
+  				<li>Ireland (duh)</li>
+  				<li>UK</li>
+  				<li>Spain</li>
+  				<li>France</li>
+  				<li>Switzerland</li>
+  				<li>Germany</li>
+  				<li>Austria</li>
+  				<li>Italy</li>
+  				<li>Netherlands</li>
+  				<li>Belgium</li>
+  				<li>Luxembourg</li>
+  				<li>Poland</li>
+  				<li>Hungary</li>
+  				<li>Romania</li>
+  				<li>Russia</li>
+  				
+  			</ul>
+  			</li>
+  			
+  		<li class = "shadow">Asia
+  			
+  			<ul>
+  				
+  				<li>China</li>
+  				<li>Japan</li>
+  				<li>South Korea</li>
+  				<li>Taiwan</li>
+  				<li>Vietnam</li>
+  				<li>Laos</li>
+  				<li>Cambodia</li>
+  				<li>Thailand</li>
+  				
+  			</ul>
+  			</li>
+  		
+
+  		<li class="shadow">North America
+  			<ul>
+  				
+  				<li>
+  				Just the USA :(
+  				</li>
+  				
+  			</ul>
+  			</li>
+  	</ol>
+</div>
+
+  <hr>
+</article>
+</div>
+</main>
+
+<!-- Social media icon bar:
+https://www.w3schools.com/howto/howto_css_sticky_social_bar.asp
+ -->
+<div class="icon-bar">
+  <a href="https://www.facebook.com/tomas.murphy.12" target = "_blank" class="facebook"><img src="./Images/fbicon.jpg" alt = "Facebook" style="width:2.5vw; height:2.5vw"></a> 
+  <a href="https://twitter.com/MossMurph" target = "_blank" class="twitter"><img src="./Images/twiticon.jpg" alt = "Twitter" style="width:2.5vw; height:2.5vw"></a> 
+  <a href="https://plus.google.com/+TomasMurphy89" target = "_blank" class="google"><img src="./Images/gplusicon.jpg" alt = "Google Plus" style="width:2.5vw; height:2.5vw"></a> 
+  <a href="https://www.linkedin.com/in/tomasmurphy89/" target = "_blank" class="linkedin"><img src="./Images/linkedinicon.jpg" alt= "Linkedin" style="width:2.5vw; height:2.5vw"></a>
+  <a href="https://www.youtube.com/channel/UCwp3NITdmHEjdB_HtsWUxOg" target = "_blank" class="youtube"><img src="./Images/youtubeicon.jpg" alt= "Youtube" style="width:2.5vw; height:2.5vw"></a> 
+  <!-- Email mail to:
+https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_link_mailto
+ -->
+  <a href="mailto:tomas.murphy2@gmail.com?Subject=Website%20visitor" target="_top" class="gmail"><img src="./Images/email.jpg" alt = "email" style="width:2.5vw; height:2.5vw"></a> 
+</div>
+</body>
+</html>
+
+
+

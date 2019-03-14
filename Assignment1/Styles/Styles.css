@@ -1,0 +1,618 @@
+/*Color reference guide:
+http://colours.neilorangepeel.com*/
+
+
+/*General*/
+
+h1
+{
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  color:black;
+  /*Text shadow:
+  https://www.w3schools.com/cssref/css3_pr_text-shadow.asp*/
+
+  text-shadow: 1px 1px 1px #aaaaaa;
+  border-bottom: 1px solid rgba(30,144,255,0.7); 
+  width: 15%;
+}
+
+/*https://www.udemy.com/the-web-developer-bootcamp/*/
+h2 {
+  font-size: 2.0rem;
+  font-weight: bold;
+  color: cadetblue;
+  font-family: times;
+  text-shadow: 1px 1px 1px #aaaaaa
+}
+/*https://www.udemy.com/the-web-developer-bootcamp/*/
+hr{
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    /*Bottom border:
+    https://css-tricks.com/styling-underlines-web/*/
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+p
+{
+  font-family: 'Karma', serif;
+}
+
+/*Code adapted from:*/
+/*https://www.udemy.com/the-web-developer-bootcamp/*/
+p.info {
+  font-family: Raleway;
+  margin-left: 14.66%;
+  font-size: 23px;
+  font-weight: 800;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(30,144,255,0.7);
+  width: 40%;
+  padding-bottom: 20px;
+  color: lightseagreen;
+}
+
+/*https://www.udemy.com/the-web-developer-bootcamp/*/
+.container {
+  width: 80%;
+  border: 20px solid rgba(211,211,211,0.9);
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 700px;
+}
+
+/*https://www.udemy.com/the-web-developer-bootcamp/*/
+
+article{
+    margin-bottom: 20px;
+}
+
+/*https://www.udemy.com/the-web-developer-bootcamp/*/
+/*https://www.w3schools.com/tags/tag_time.asp*/
+time {
+  color: dodgerblue;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+/*https://www.udemy.com/the-web-developer-bootcamp/*/
+.headline{
+  border-left: 5px solid #bdc3c7;
+  padding-left: 5px;
+}
+
+/*P3_2.zip class assignment solution*/
+.wrapper {
+  margin: 0 auto;
+  padding: 0 10px;
+  max-width: 940px;
+  width:90%;
+}
+
+
+.color-character
+{
+  color: dodgerblue;
+  font-size: 150%;
+  font-weight: bold;
+}
+
+footer {
+
+/*Footer:
+https://www.w3schools.com/howto/howto_css_fixed_footer.asp*/
+
+    position: fixed;
+    bottom: 0;
+    width: 99%;
+    max-width: 100%;
+    background-color: rgba(211,211,211,0.95);
+    margin: auto;
+    /*Rounded edges:
+    https://www.w3schools.com/css/css3_borders.asp*/
+
+    border-radius: 15px;
+}
+/*---------------------------------------------------------------*/
+
+/*Nav*/
+
+/*Nav effects code adapted from:
+https://codepen.io/maheshambure21/pen/QwXaRw
+Fixed menu nav bar:
+https://www.w3schools.com/howto/howto_css_fixed_menu.asp
+Center nav bar:
+https://stackoverflow.com/questions/39681661/how-do-horizontally-center-a-fixed-navigation-bar;
+*/
+
+
+
+nav {
+  list-style: none;
+  position: fixed;
+  width: 100%;
+  text-align:center;
+
+  /*
+  Z-index:
+  https://www.w3schools.com/CSSref/tryit.asp?filename=trycss_zindex
+*/
+  z-index: 1;
+}
+
+nav ul {
+  list-style: none;
+  list-style-type: none;
+  text-align: center;
+  position: relative;
+  top:0;
+  background-color: rgba(211,211,211,0.95);
+  border-radius: 25px;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  z-index:1;
+  padding: 0% 1.7% 0% 1.7%;
+}
+
+
+nav ul li {
+  display: inline-block;
+  text-align: center;
+}
+nav ul li a {
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  color: darkcyan;
+  font-family: verdana;
+  font-weight: 800;
+  text-transform: uppercase;
+  position:relative;
+  z-index: 1;
+}
+
+/*
+  Links:
+  https://www.w3schools.com/css/css_link.asp
+*/
+
+
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+
+nav ul li a:hover {
+  color: white;
+}
+nav ul li a:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 1px;
+  content: '.';
+  color: transparent;
+  background: cornflowerblue;
+  opacity: 0;
+  z-index: -1;
+}
+nav ul li a:hover:after {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+}
+/*----------------------------------------------*/
+
+
+/*Icon bar*/
+
+/*Social media icon bar:
+https://www.w3schools.com/howto/howto_css_sticky_social_bar.asp
+*/
+
+.icon-bar {
+  position: fixed;
+  top: 55%;
+  transform: translateY(-50%);
+  transition: all 0.7s;
+}
+
+/* Style the icon bar links */
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 1vw;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 4px;
+}
+
+.icon-bar-footer a{
+  display: inline-block;
+  padding: 2px 50px 0px 50px;
+  transition: all 0.3s ease;
+  font-size: 20px;
+  align-self: center;
+  margin-right : 3.9%;
+  margin-left: 3.9%; 
+  z-index: 1;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.icon-bar-footer a:hover {
+  background-color: #000;
+}
+
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.google {
+  background: #dd4b39;
+  color: white;
+}
+
+.linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.gmail {
+  background: tan;
+  color: white;
+}
+/*----------------------------------------------------------------------*/
+
+/*Fixed backgrounds*/
+
+/*
+Background attachment property:
+https://www.w3schools.com/cssref/pr_background-attachment.asp
+*/
+
+.fixed-bg 
+{
+    min-height: 200px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#fixed-bg-home 
+{
+  background-image: url(../Images/Japan/9.jpg);
+}
+
+#fixed-bg-contact 
+{
+    background-image: url(../Images/Japan/7.jpg);
+
+}
+
+#fixed-bg-china 
+{
+    background-image: url(../Images/China/banner2.jpg);
+
+}
+
+#fixed-bg-japan 
+{
+    background-image: url(../Images/Japan/banner2.jpg);
+
+}
+
+#fixed-bg-video 
+{
+    background-image: url(../Images/Japan/11.jpg);
+}
+/*------------------------------------------------------------------------------------------------
+
+
+/*Homepage*/
+
+/*https://www.w3schools.com/Css/css_list.asp*/
+
+table, th, td
+{
+  border: 3.5px cadetblue solid;
+  border-collapse: collapse;
+  text-align: center;
+  width: 700px;
+  margin: 20px auto;
+  overflow-x: auto;
+  color: white;
+  background-color: darkcyan;
+  font-family: 'Karma', serif;
+  font-weight: normal;
+
+
+}
+td.green
+{
+  background-color: lawngreen;
+}
+
+td.red
+{
+  background-color: orangered;
+}
+
+td.yellow
+{
+  background-color: yellow;
+}
+
+
+
+#homepagelist ol li {
+  color:dodgerblue;
+  font-size:150%;
+  list-style-type: upper-roman;
+  font-family: 'Karma', serif;
+}
+
+#homepagelist ul li {
+  color:darkcyan;
+  font-size: 70%;
+  font-family: 'Karma', serif;
+/*Square bullet points:
+https://www.w3schools.com/Css/css_list.asp*/
+
+  list-style-type: square;
+
+}
+/*Change bullet point colors:
+https://www.w3.org/Style/Examples/007/color-bullets.en.html*/
+
+#homepagelist ul li::before {
+  content: "\25AA"; 
+  color: cornflowerblue;
+  display: inline-block; 
+  width: 1em;
+  margin-left: -1em
+}
+
+/*P3_2.zip class assignment solution*/
+#country ul {
+  margin: 30px 0;
+  list-style: none;
+}
+/*P3_2.zip class assignment solution*/
+#country ul li {
+  width: 250px;
+  padding-top: 175px;
+  float: left;
+  margin-right: 40px;
+  text-align: center;
+}
+/*P3_2.zip class assignment solution*/
+#country ul li.country1 {
+  background: url('../Images/china.jpg') no-repeat top center;
+  /*
+  Chinese flag:
+  https://www.britannica.com/topic/flag-of-China
+  */
+}
+/*P3_2.zip class assignment solution*/
+#country ul li.country2 {
+  background: url('../Images/japan.jpg') no-repeat top center;
+  /*
+  Japanese flag:
+  https://commons.wikimedia.org/wiki/File:Flag_of_Japan_(with_border).png
+  */
+
+}
+/*P3_2.zip class assignment solution*/
+.clear {
+  clear: both;
+}
+
+#center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:16vw; 
+  height:14vw;
+}
+
+/*---------------------------------------------------------------------*/
+
+/*China gallery*/
+
+/*Code adapted from:;
+https://codepen.io/dudleystorey/pen/ehKpi
+*/
+
+@keyframes slides {
+0% { left: 0%; }
+10% { left: 0%; }
+20% { left: -100%; }
+30% { left: -100%; }
+40% { left: -200%; }
+55% { left: -200%; }
+65% { left: -300%; }
+70% { left: -300%; }
+80% { left: -400%; }
+100% { left: -400%; }
+
+}
+
+
+div#slider
+{ 
+  overflow: hidden; 
+}
+div#slider figure img 
+{
+  width: 10%; float: left; 
+}
+div#slider figure 
+{ 
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 25s slides infinite; 
+}
+
+
+/*--------------------------------------------------------------------------*/
+
+/*Japan*/
+
+/*https://www.udemy.com/the-web-developer-bootcamp/*/
+
+/*Grayscale:
+https://www.w3schools.com/cssref/css3_pr_filter.asp
+
+Zoom on hover:
+https://www.w3schools.com/howto/howto_css_zoom_hover.asp*/
+
+
+img.japan {
+  width: 30%;
+  float: left;
+  margin: 1.51%;
+  padding-bottom: 2%;
+  filter: grayscale(100%);
+}
+
+.zoom {
+    transition: transform .2s; 
+    margin: 0 auto;
+}
+
+.zoom:hover {
+    transform: scale(1.2);
+  }
+
+/*------------------------------------------------------------------------------*/
+
+/*Video*/
+
+/*Responsive video:
+https://www.w3schools.com/css/css_rwd_videos.asp*/
+/*https://www.w3schools.com/tags/att_iframe_frameborder.asp*/
+/*https://www.w3schools.com/html/html_youtube.asp*/
+
+iframe
+{
+ max-width: 100%;
+ display: block;
+margin: 0 auto;
+border:none; 
+}
+
+/*P3_2.zip class assignment solution*/
+.video-post {
+  background-color: #f8fafa;
+  padding: 60px 0;
+  text-align: center;
+  width:100%;
+}
+/*P3_2.zip class assignment solution*/
+.video-post h3 {
+  display: block;
+  margin: 0 auto 20px auto;
+  width: 400px;
+  border-bottom: 1px solid dodgerblue;
+  padding: 0 0 20px 0;
+  color: darkcyan;
+  font-size:150%;
+}
+
+/*----------------------------------------*/
+
+/*--------------------------------------------------------------------*/
+/*Contact page*/
+
+/*Box shadow property
+https://www.w3schools.com/cssref/css3_pr_box-shadow.asp*/
+/*Styling inputs:
+https://stackoverflow.com/questions/17042201/how-to-style-input-and-submit-button-with-css*/
+
+
+input[type=submit] {
+    padding:5px 20px; 
+    background:rgba(100,149,237,0.8); 
+    border-radius: 15px;
+    box-shadow: 5px 8px 18px #888888;
+    font-family: 'Karma', serif;
+}
+
+
+input[type=checkbox] {
+    box-shadow: 5px 8px 18px #888888;
+}
+
+select
+{
+ box-shadow: 5px 8px 18px #888888; 
+}
+
+textarea
+{
+  box-shadow: 5px 8px 18px #888888; 
+}
+
+/*Styling labels:
+https://www.webteacher.ws/2009/03/05/tip-styling-the-label-element-with-css/*/
+/*Label color:
+https://stackoverflow.com/questions/33511556/how-to-change-label-color-with-html-and-css-without-js*/
+
+
+label
+{
+color:cornflowerblue;
+font-family: 'Karma', serif;
+font-size: 115%;
+font-weight: bold;
+}
+
+/*Code adapted from:*/
+/*https://www.udemy.com/the-web-developer-bootcamp/*/
+.contact-me-box
+{
+    background-color: white;
+    width: 70%;
+    max-width: 430px;
+    padding: 10px 15px 10px 15px;
+    border: 6px solid rgba(112,128,144,0.3);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    box-shadow: 5px 5px 2px #aaaaaa;
+    border-radius: 15px;
+    text-align: center;
+}
+/*---------------------------------------------------------------------*/
+
